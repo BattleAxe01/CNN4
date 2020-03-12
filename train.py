@@ -29,10 +29,10 @@ train_datagen = ImageDataGenerator(rescale=1. / 255, shear_range=0.2, zoom_range
 test_datagen = ImageDataGenerator(rescale=1. / 255)
 
 train_gen = train_datagen.flow_from_directory('dataset/train_set', target_size=input_size, batch_size=batch,
-                                              class_mode='categorical')
+                                              class_mode='categorical', shuffle=True)
 
 test_gen = test_datagen.flow_from_directory('dataset/test_set', target_size=input_size, batch_size=batch,
-                                            class_mode='categorical')
+                                            class_mode='categorical', shuffle=True)
 
 # add layers
 from tensorflow.keras.layers import Convolution2D
