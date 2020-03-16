@@ -17,7 +17,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 # image pre-processing
 from tensorflow.keras.preprocessing import image
 
-img = image.load_img(path + "/cat.4005.jpg", target_size=input_size)
+img = image.load_img(path + "/cat_sticker_2.jpg", target_size=input_size)
 img = img_to_array(img)
 img = np.expand_dims(img, axis=0)
 

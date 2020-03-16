@@ -59,7 +59,7 @@ model.summary()
 model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
 # train CNN
-model.fit(train_gen, steps_per_epoch=8000 / batch, epochs=10, validation_data=test_gen, validation_steps=2000 / batch)
+model.fit(train_gen, steps_per_epoch=8000 / batch, epochs=100, validation_data=test_gen, validation_steps=2000 / batch)
 
 # save model
 model.save("./model")
